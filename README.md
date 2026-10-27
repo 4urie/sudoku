@@ -12,6 +12,8 @@ Fill the empty squares with digits 1–9. Every row, column, and bold 3 × 3 box
 4. Use **Hint** to reveal one answer, or **Check** to highlight incorrect entries.
 5. Fill the board correctly to finish the puzzle. The timer stops when it is solved.
 
+Select **Take a tour** beside the timer for a moving pointer walkthrough of the controls. The tour opens automatically on a first visit if you have not begun interacting, and can be skipped with **Esc** or the close button.
+
 Each generated puzzle has one solution. Difficulty is based on the number of starting clues; it does not measure solving technique.
 
 ## Assignment post draft

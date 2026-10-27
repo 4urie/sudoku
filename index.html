@@ -7,21 +7,23 @@
   <meta name="description" content="A friendly Sudoku game with clear instructions, notes, hints, and three difficulty levels.">
   <title>Sudoku Studio</title>
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="handdrawn.css">
+  <link rel="stylesheet" href="tour.css">
 </head>
 <body>
   <div class="app-shell">
     <header class="site-header">
-      <a class="brand" href="#top" aria-label="Sudoku Studio home"><span class="brand-mark">▦</span><span>Sudoku <strong>Studio</strong></span></a>
+      <a class="brand" href="#top" aria-label="Sudoku Studio home"><span class="brand-mark">▦</span><span>Sudoku <strong>Studio</strong></span><span class="brand-spark" aria-hidden="true">✳</span></a>
       <nav aria-label="Main navigation"><a href="#how-to-play">How to play</a><a href="#project">About the project</a></nav>
     </header>
     <main id="top">
       <section class="hero" aria-labelledby="hero-title">
-        <div><p class="eyebrow">A little logic, a lot of satisfaction</p><h1 id="hero-title">Make room for <em>one more number.</em></h1><p class="hero-copy">Take a thoughtful break with a Sudoku game that is easy to learn and satisfying to finish.</p></div>
-        <div class="hero-stamp" aria-hidden="true">9 × 9<br><small>one clear goal</small></div>
+        <div><p class="eyebrow">✳ A little logic, a lot of satisfaction</p><h1 id="hero-title">Make room for <em>one more number.</em></h1><p class="hero-copy">Grab a pencil (or just your keyboard). There’s a fresh little puzzle waiting for you.</p></div>
+        <div class="hero-stamp" aria-hidden="true"><span class="stamp-doodle">✳</span>9 × 9<br><small>one clear goal</small></div>
       </section>
       <section class="game-layout" aria-label="Sudoku game">
         <div class="game-card">
-          <div class="game-heading"><div><p class="eyebrow">YOUR PUZZLE</p><h2>Let's play.</h2></div><div class="timer" aria-label="Elapsed time">◷ <span id="timer">00:00</span></div></div>
+          <div class="game-heading"><div><p class="eyebrow">YOUR PUZZLE</p><h2>Let's play.</h2></div><div class="heading-actions"><button id="start-tour" class="tour-launch" type="button" aria-label="Take a tour of the Sudoku game">➤ Take a tour</button><div class="timer" aria-label="Elapsed time">◷ <span id="timer">00:00</span></div></div></div>
           <div class="game-toolbar"><label for="difficulty">Difficulty</label><select id="difficulty"><option value="easy">Easy</option><option value="medium">Medium</option><option value="hard">Hard</option></select><button id="new-game" class="button button-primary" type="button">New game</button></div>
           <div id="board" class="board" role="grid" aria-label="Sudoku board"></div>
           <p id="status" class="status" role="status" aria-live="polite">Choose a square, then enter a number.</p>
@@ -36,5 +38,6 @@
     <footer><span>Sudoku Studio</span><span>A little progress, one square at a time.</span></footer>
   </div>
   <script src="script.js"></script>
+  <script src="tour.js"></script>
 </body>
 </html>
