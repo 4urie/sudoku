@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f8f5ed">
+  <meta name="description" content="A friendly Sudoku game with clear instructions, notes, hints, and three difficulty levels.">
+  <title>Sudoku Studio</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app-shell">
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="Sudoku Studio home"><span class="brand-mark">▦</span><span>Sudoku <strong>Studio</strong></span></a>
+      <nav aria-label="Main navigation"><a href="#how-to-play">How to play</a><a href="#project">About the project</a></nav>
+    </header>
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <div><p class="eyebrow">A little logic, a lot of satisfaction</p><h1 id="hero-title">Make room for <em>one more number.</em></h1><p class="hero-copy">Take a thoughtful break with a Sudoku game that is easy to learn and satisfying to finish.</p></div>
+        <div class="hero-stamp" aria-hidden="true">9 × 9<br><small>one clear goal</small></div>
+      </section>
+      <section class="game-layout" aria-label="Sudoku game">
+        <div class="game-card">
+          <div class="game-heading"><div><p class="eyebrow">YOUR PUZZLE</p><h2>Let's play.</h2></div><div class="timer" aria-label="Elapsed time">◷ <span id="timer">00:00</span></div></div>
+          <div class="game-toolbar"><label for="difficulty">Difficulty</label><select id="difficulty"><option value="easy">Easy</option><option value="medium">Medium</option><option value="hard">Hard</option></select><button id="new-game" class="button button-primary" type="button">New game</button></div>
+          <div id="board" class="board" role="grid" aria-label="Sudoku board"></div>
+          <p id="status" class="status" role="status" aria-live="polite">Choose a square, then enter a number.</p>
+          <div class="number-pad" aria-label="Numbers"><button type="button" data-number="1">1</button><button type="button" data-number="2">2</button><button type="button" data-number="3">3</button><button type="button" data-number="4">4</button><button type="button" data-number="5">5</button><button type="button" data-number="6">6</button><button type="button" data-number="7">7</button><button type="button" data-number="8">8</button><button type="button" data-number="9">9</button></div>
+          <div class="game-actions"><button id="notes" type="button" aria-pressed="false">✎ Notes <span>Off</span></button><button id="erase" type="button">⌫ Erase</button><button id="hint" type="button">✦ Hint</button><button id="check" type="button">✓ Check</button></div>
+        </div>
+        <aside class="side-card"><div class="side-icon" aria-hidden="true">✦</div><p class="eyebrow">NEW HERE?</p><h2>Every square has a place.</h2><p>Fill the empty squares with numbers 1 through 9. Each row, column, and bold 3 × 3 box needs every number exactly once.</p><div class="tip"><strong>Quick tip</strong><p>Start with a row, column, or box that already has lots of numbers. Use Notes to pencil in possibilities.</p></div><a href="#how-to-play" class="text-link">Read the full instructions →</a></aside>
+      </section>
+      <section id="how-to-play" class="info-section"><p class="eyebrow">THE RULES</p><h2>How to play Sudoku</h2><div class="steps"><article><span>01</span><h3>Look for what is missing</h3><p>Scan a row, column, or 3 × 3 box. Each must contain 1 through 9 with no repeats.</p></article><article><span>02</span><h3>Choose a square</h3><p>Click or tap an empty square and select a number. On a keyboard, use 1–9 and arrow keys.</p></article><article><span>03</span><h3>Work it out</h3><p>Toggle Notes for possible numbers. Erase an entry, request a hint, or check your work at any time.</p></article></div><p class="rule-note">The prefilled numbers cannot be changed. The puzzle is complete when every square is correctly filled.</p></section>
+      <section id="project" class="project-section"><div><p class="eyebrow">ABOUT THE PROJECT</p><h2>Designed for a calmer puzzle break.</h2></div><p>Sudoku Studio is a browser based Sudoku prototype with three difficulty levels, pencil notes, hints, a timer, and clear feedback. It works on desktop and mobile, with mouse, touch, and keyboard controls.</p></section>
+    </main>
+    <footer><span>Sudoku Studio</span><span>A little progress, one square at a time.</span></footer>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
